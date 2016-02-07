@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="IFRS">
+      <UniqueIdentifier>{9b21194e-c268-4a48-9753-0c909ba859ce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\sbsa\sbsaObjects\IFRS\IFRSEarlyWarningCompanyObject.h">
+      <Filter>IFRS</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\sbsa\sbsaObjects\IFRS\IFRSEarlyWarningCompanyObject.cpp">
+      <Filter>IFRS</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
