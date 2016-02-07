@@ -9,7 +9,7 @@
 #include "./xll/xl_array.h"
 #include "./xll/cpp_xloper.h"
 #include "./xll/xllAddIn.h"
-#include <sjd/OptionPricing/OptionsFormula.h>
+#include <sjd\Tools\Common.h>
 #include <sjd\RateSource\Volatility\VolatilitySurfaces.h>
 
 using namespace std;
