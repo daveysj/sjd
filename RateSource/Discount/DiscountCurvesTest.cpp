@@ -6,7 +6,7 @@ using namespace sjd;
 
 void DiscountCurvesTest::testConstruction() 
 {
-    BOOST_MESSAGE("Testing Discount Curve Construction ...");
+    BOOST_TEST_MESSAGE("Testing Discount Curve Construction ...");
     Calendar calendar = SouthAfrica();
     Date anchorDate = Date(27,Jan,2012);
     vector<Date> observationDates, incorrectObservationDates;
@@ -60,7 +60,7 @@ void DiscountCurvesTest::testConstruction()
 
 void DiscountCurvesTest::testParallelBump() 
 {
-    BOOST_MESSAGE("Testing Discount Curve Parallel Bump ...");
+    BOOST_TEST_MESSAGE("Testing Discount Curve Parallel Bump ...");
     Calendar calendar = SouthAfrica();
     Date anchorDate = Date(27,Jan,2012);
     vector<Date> observationDates;
@@ -90,7 +90,7 @@ void DiscountCurvesTest::testParallelBump()
 
 void DiscountCurvesTest::testConsistencyOfGetMethods()
 {
-    BOOST_MESSAGE("Testing Discount Curve for consistency between get methods ...");
+    BOOST_TEST_MESSAGE("Testing Discount Curve for consistency between get methods ...");
 
     GenerateRates re = GenerateRates();
     Date anchorDate = re.defaultAnchorDate;
@@ -122,7 +122,7 @@ void DiscountCurvesTest::testConsistencyOfGetMethods()
 
 void DiscountCurvesTest::testValues()
 {
-    BOOST_MESSAGE("Testing Discount Curve values ...");
+    BOOST_TEST_MESSAGE("Testing Discount Curve values ...");
 
     GenerateRates re = GenerateRates();
     Date defaultAnchorDate = re.defaultAnchorDate;
@@ -141,7 +141,7 @@ void DiscountCurvesTest::testValues()
 
 void DiscountCurvesTest::testRollForward()
 {
-    BOOST_MESSAGE("Testing Discount Curve roll forward ...");
+    BOOST_TEST_MESSAGE("Testing Discount Curve roll forward ...");
 
     GenerateRates re = GenerateRates();
     boost::shared_ptr<Calendar> defaultCalendar = re.defaultCalendar;

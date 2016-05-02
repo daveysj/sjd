@@ -23,7 +23,7 @@ boost::shared_ptr<EuropeanOption> OptionContactTest::getDefaultEuropeanOption(Da
 
 void OptionContactTest::testBuySell()
 {
-    BOOST_MESSAGE("Testing OptionContract ...");
+    BOOST_TEST_MESSAGE("Testing OptionContract ...");
     Date anchorDate(1,Jan,2013);
     boost::shared_ptr<EuropeanOption> contract = getDefaultEuropeanOption(anchorDate);
     BuySell bs = SELL;
@@ -204,7 +204,7 @@ void OptionContactTest::testGetPayoffAfterMaturity()
 
 void OptionContactTest::testEuropeanOptionWithMoneynessVol() 
 {
-    BOOST_MESSAGE("Testing European Option with moneyness vol ...");
+    BOOST_TEST_MESSAGE("Testing European Option with moneyness vol ...");
 
     boost::shared_ptr<RatesEnvironment> re;
     GenerateRates gr = GenerateRates();

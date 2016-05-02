@@ -7,7 +7,7 @@ using namespace sjd;
 
 
 void MarginTest::testSimpleMargin() {
-    BOOST_MESSAGE("Testing SimpleMargin");
+    BOOST_TEST_MESSAGE("Testing SimpleMargin");
 
     bool useMyThreshold = true, useCptyThreshold = true;
     double myThreshold = 2000000.0, cptyThreshold = 1000000.0, minimumTransferAmount = 500000.0, rounding = 10000.0;

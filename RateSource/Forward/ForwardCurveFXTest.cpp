@@ -42,7 +42,7 @@ void ForwardCurveFXTest::getDefaultDatesAndDF(Date anchorDate,
 
 void ForwardCurveFXTest::testForwardCurveConstruction() 
 {
-    BOOST_MESSAGE("Testing Construction of ForwardCurveFX, ForwardCurveStochasticFX and ForwardCurveDeterministicFX ...");
+    BOOST_TEST_MESSAGE("Testing Construction of ForwardCurveFX, ForwardCurveStochasticFX and ForwardCurveDeterministicFX ...");
     Date anchorDate = Date(27,Jan,2012);
     Calendar calendar = NullCalendar();
     boost::shared_ptr<DiscountCurve> domesticDRS; 
@@ -81,7 +81,7 @@ void ForwardCurveFXTest::testForwardCurveConstruction()
 
 void ForwardCurveFXTest::testDeterministicCurve()
 {
-    BOOST_MESSAGE("Testing rolling and bumping of ForwardCurveDeterministicFX ...");
+    BOOST_TEST_MESSAGE("Testing rolling and bumping of ForwardCurveDeterministicFX ...");
     Date anchorDate = Date(27,Jan,2012);
     Calendar calendar = NullCalendar();
     boost::shared_ptr<DiscountCurve> domesticDRS; 
@@ -109,7 +109,7 @@ void ForwardCurveFXTest::testDeterministicCurve()
 
 void ForwardCurveFXTest::testStochasticCurve()
 {
-    BOOST_MESSAGE("Testing rolling and bumping of ForwardCurveStochasticFX ...");
+    BOOST_TEST_MESSAGE("Testing rolling and bumping of ForwardCurveStochasticFX ...");
     Date anchorDate = Date(27,Jan,2012);
     Calendar calendar = NullCalendar();
     boost::shared_ptr<DiscountCurve> domesticDRS; 

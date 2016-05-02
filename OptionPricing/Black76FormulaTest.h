@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <boost\test\unit_test.hpp>
-#include <boost\math\special_functions\fpclassify.hpp> // isnan
+#include <boost\math\special_functions\fpclassify.hpp> // boost::math::isnan
 #include <sjd\sjdTest\TestingParameters.h>
 #include "Black76Formula.h"
 

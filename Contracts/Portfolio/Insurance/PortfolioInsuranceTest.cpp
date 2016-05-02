@@ -10,7 +10,7 @@ using namespace sjd;
 
 
 void PortfolioInsuranceTest::testSimpleInsurance() {
-    BOOST_MESSAGE("Testing Simple Insurance");
+    BOOST_TEST_MESSAGE("Testing Simple Insurance");
 
     GenerateRates gr = GenerateRates();
 
@@ -86,7 +86,7 @@ void PortfolioInsuranceTest::testSimpleInsurance() {
 
 
 void PortfolioInsuranceTest::testSimpleInsuranceWithTermStructure() {
-    BOOST_MESSAGE("Testing Simple Insurance with Term Structure");
+    BOOST_TEST_MESSAGE("Testing Simple Insurance with Term Structure");
 
     GenerateRates gr = GenerateRates();
     Date policyStartDate = Date(27,Jan,2010);

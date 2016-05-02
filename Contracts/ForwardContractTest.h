@@ -5,8 +5,8 @@
 
 #include <math.h>
 #include <boost\test\unit_test.hpp>
-#include <boost\math\special_functions\fpclassify.hpp> // isnan
-// to use the isnan(...) function
+#include <boost\math\special_functions\fpclassify.hpp> // boost::math::isnan
+// to use the boost::math::isnan(...) function
 #include <boost\math\special_functions\fpclassify.hpp>
 
 #include "EuropeanForwardContract.h"

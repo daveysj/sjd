@@ -11,7 +11,7 @@
 #include <sjd\RateSource\GenerateRatesEnvironments.h>
 #include <sjd\sjdTest\GenerateContracts.h>
 #include <sjd\sjdTest\TestingParameters.h>
-// to use the isnan(...) function
+// to use the boost::math::isnan(...) function
 #include <boost\math\special_functions\fpclassify.hpp>
 
 

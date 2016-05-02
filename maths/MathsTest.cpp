@@ -12,7 +12,7 @@ using namespace boost::assign; // used to initialize vector
 #include <ql\math\interpolations\bilinearinterpolation.hpp>
 
 void MathsFunctionsTest::testFunctions() {
-    BOOST_MESSAGE("Testing Maths Functions...");
+    BOOST_TEST_MESSAGE("Testing Maths Functions...");
 
    int y = 10;
    long fact = 1;
@@ -59,7 +59,7 @@ void MathsFunctionsTest::testFunctions() {
 }
 
 void MathsFunctionsTest::testLinearInterpolator() {
-    BOOST_MESSAGE("Testing LinearInterpolator class ...");
+    BOOST_TEST_MESSAGE("Testing LinearInterpolator class ...");
 
    double x1 = 1, x2 = 10, y1 = 1, y2 = 10;
    LinearInterpolator linearInterpolator(x1, y1, x2, y2);
@@ -75,7 +75,7 @@ void MathsFunctionsTest::testLinearInterpolator() {
 }
 
 void MathsFunctionsTest::testArrayInterpolator() {
-    BOOST_MESSAGE("Testing ArrayInterpolator class ...");
+    BOOST_TEST_MESSAGE("Testing ArrayInterpolator class ...");
    vector<double> xVector, yVector;
 
    // non monotonic inputs
@@ -90,7 +90,7 @@ void MathsFunctionsTest::testArrayInterpolator() {
    yVector.push_back(m * x + c);
    LinearArrayInterpolator interp(xVector, yVector, true);    
    BOOST_CHECK(interp.isOk() == false);
-   BOOST_CHECK(isnan<double>(interp.getRate(3.5)) == true);
+   BOOST_CHECK(boost::math::isnan<double>(interp.getRate(3.5)) == true);
 
     xVector.pop_back();
    xVector.push_back(5);
@@ -151,7 +151,7 @@ void MathsFunctionsTest::testArrayInterpolator() {
 
 void MathsFunctionsTest::testLinearArrayInterpolator()
 {
-    BOOST_MESSAGE("Testing LinearArrayInterpolator class ...");
+    BOOST_TEST_MESSAGE("Testing LinearArrayInterpolator class ...");
 
    vector<double> xVector, yVector;
    double m = 2.4, c = -10;
@@ -167,7 +167,7 @@ void MathsFunctionsTest::testLinearArrayInterpolator()
    BOOST_CHECK(interpWithExtrap.getRate(3.5) == (m * 3.5 + c));
    BOOST_CHECK(interpWithExtrap.getRate(4.75) == interpWithoutExtrap.getRate(4.75));
    BOOST_CHECK(abs(interpWithExtrap.getRate(10.75) - (m * 10.75 + c)) < epsilon);
-   BOOST_CHECK(isnan<double>(interpWithoutExtrap.getRate(10.75)) == true);
+   BOOST_CHECK(boost::math::isnan<double>(interpWithoutExtrap.getRate(10.75)) == true);
 }
 
 void MathsFunctionsTest::testCubicSplineInterpolator() 

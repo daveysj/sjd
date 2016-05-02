@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -20,12 +20,14 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -40,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(oh);$(sjd);$(boost);$(ql);$(IncludePath)</IncludePath>
-    <LibraryPath>$(boost)lib;$(ql)lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(boost)lib32-msvc-14.0\;$(ql)lib;$(LibraryPath)</LibraryPath>
     <TargetExt>.xll</TargetExt>
     <OutDir>$(dllLib)</OutDir>
     <TargetName>sjd</TargetName>
@@ -48,7 +50,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(oh);$(sjd);$(boost);$(ql);$(IncludePath)</IncludePath>
-    <LibraryPath>$(boost)lib;$(ql)lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(boost)lib32-msvc-14.0\;$(ql)lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(dllLib)</OutDir>
     <TargetExt>.xll</TargetExt>
     <TargetName>sjd</TargetName>

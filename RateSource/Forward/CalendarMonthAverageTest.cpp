@@ -8,7 +8,7 @@ using namespace sjd;
 
 void CalendarMonthAverageTest::testConstruction() 
 {
-    BOOST_MESSAGE("Testing Calendar Month Average Futures Curve Construction ...");
+    BOOST_TEST_MESSAGE("Testing Calendar Month Average Futures Curve Construction ...");
 
     Calendar calendar = NullCalendar();
     Date anchorDate = Date(27,Jan,2012);
@@ -78,7 +78,7 @@ void CalendarMonthAverageTest::testConstruction()
 
 void CalendarMonthAverageTest::testValues()
 {
-    BOOST_MESSAGE("Testing Calendar Month Average Forward Curve Valuations ...");
+    BOOST_TEST_MESSAGE("Testing Calendar Month Average Forward Curve Valuations ...");
 
     Calendar calendar = NullCalendar();
     Date anchorDate = Date(27,Jan,2012);
@@ -118,7 +118,7 @@ void CalendarMonthAverageTest::testValues()
 
 void CalendarMonthAverageTest::testRoll_CMA()
 {
-    BOOST_MESSAGE("Testing Calendar Month Average Forward Curve roll ...");
+    BOOST_TEST_MESSAGE("Testing Calendar Month Average Forward Curve roll ...");
 
     GenerateRates re = GenerateRates();
 

@@ -6,7 +6,7 @@ using namespace sjd;
 
 void VolatilityCurveTest::testVolatilityCurveConstruction() 
 {
-    BOOST_MESSAGE("Testing VolatilityCurve Construction ...");
+    BOOST_TEST_MESSAGE("Testing VolatilityCurve Construction ...");
     Calendar calendar = SouthAfrica();
     Date anchorDate = Date(27,Jan,2012);
     vector<Date> observationDates, incorrectObservationDates;
@@ -66,7 +66,7 @@ void VolatilityCurveTest::testVolatilityCurveConstruction()
 
 void VolatilityCurveTest::testVolatilityCurveConsistencyBetweenVolAndSD()
 {
-    BOOST_MESSAGE("Testing Volatiltiy Curve for consistency between getVol and getSD ...");
+    BOOST_TEST_MESSAGE("Testing Volatiltiy Curve for consistency between getVol and getSD ...");
     GenerateRates re = GenerateRates();
     boost::shared_ptr<Calendar> defaultCalendar = re.defaultCalendar;
     Date anchorDate = re.defaultAnchorDate;
@@ -87,7 +87,7 @@ void VolatilityCurveTest::testVolatilityCurveConsistencyBetweenVolAndSD()
 
 void VolatilityCurveTest::testVolatilityCurveValues()
 {
-    BOOST_MESSAGE("Testing Volatiltiy Curve values ...");
+    BOOST_TEST_MESSAGE("Testing Volatiltiy Curve values ...");
     GenerateRates re = GenerateRates();
     boost::shared_ptr<Calendar> calendar = re.defaultCalendar;
     Date anchorDate = re.defaultAnchorDate;
@@ -104,7 +104,7 @@ void VolatilityCurveTest::testVolatilityCurveValues()
 
 void VolatilityCurveTest::testVolatilityCurveRoll()
 {
-    BOOST_MESSAGE("Testing Volatiltiy Curve roll forward ...");
+    BOOST_TEST_MESSAGE("Testing Volatiltiy Curve roll forward ...");
 
     GenerateRates re = GenerateRates();
     boost::shared_ptr<Calendar> defaultCalendar = re.defaultCalendar;

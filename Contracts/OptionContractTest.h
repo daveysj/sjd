@@ -11,7 +11,7 @@
 #include <sjd\sjdTest\TestingParameters.h>
 
 #include <boost\test\unit_test.hpp>
-// to use the isnan(...) function
+// to use the boost::math::isnan(...) function
 #include <boost\math\special_functions\fpclassify.hpp>
 
 #include <ql\time\daycounter.hpp>

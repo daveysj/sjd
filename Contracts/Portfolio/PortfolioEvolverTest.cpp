@@ -33,7 +33,7 @@ void stopTimer(string text)
 
 void PortfolioEvolverTest::testPortfolioEvovler()
 {
-    BOOST_MESSAGE("Testing Portfolios Evolver ... time based tests excluded");
+    BOOST_TEST_MESSAGE("Testing Portfolios Evolver ... time based tests excluded");
     // /*
     boost::timer t;
 
