@@ -74,7 +74,7 @@ namespace sjd
             if (!portfolio->isOK())
             {
                 stringstream descriptionStream; 
-                descriptionStream << "Portfolio cannot value against Rate Envoronment ";
+                descriptionStream << "Portfolio cannot value against Rate Environment ";
                 descriptionStream << i << ": " << portfolio->getErrorMessagesAsString();
                 errorTracking->populateErrorMessage(descriptionStream.str());
                 return false;
