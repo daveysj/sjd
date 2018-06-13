@@ -41,7 +41,7 @@ boost::shared_ptr<AsianForward> ForwardContactTest::getDefaultAsianForward(Date 
 
 void ForwardContactTest::testBuySell()
 {
-    BOOST_MESSAGE("Testing ForwardContract ...");
+    BOOST_TEST_MESSAGE("Testing ForwardContract ...");
    
    Date anchorDate(1,Jan,2013);
     boost::shared_ptr<EuropeanForward> fc = getDefaultEuropeanForward(anchorDate);
@@ -352,7 +352,7 @@ test_suite* ForwardContactTest::suite()
     suite->add(BOOST_TEST_CASE(&ForwardContactTest::testGetPayoffAfterMaturity));
 
 
-    BOOST_MESSAGE("Testing AsianForwards ...");
+    BOOST_TEST_MESSAGE("Testing AsianForwards ...");
     suite->add(BOOST_TEST_CASE(&ForwardContactTest::testAsianAveragingDates));
     suite->add(BOOST_TEST_CASE(&ForwardContactTest::testFixingAndForwardDates));
 

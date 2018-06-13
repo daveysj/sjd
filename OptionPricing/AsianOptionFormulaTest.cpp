@@ -55,14 +55,14 @@ AsianOptionInputParameters::AsianOptionInputParameters(vector<double> forwardRat
 AsianOptionTest
 =======================================================================================*/
 void AsianOptionTest::testErrorMessages() {
-    BOOST_MESSAGE("Testing Asian Option Error Messages ...");
-    BOOST_MESSAGE("... before averaging");
+    BOOST_TEST_MESSAGE("Testing Asian Option Error Messages ...");
+    BOOST_TEST_MESSAGE("... before averaging");
     testErrorMessagesWithSpecificData(getAsianInputsBeforeAveragingStarts());
-    BOOST_MESSAGE("... during averaging");
+    BOOST_TEST_MESSAGE("... during averaging");
     testErrorMessagesWithSpecificData(getAsianInputsDuringAveraging());
-    BOOST_MESSAGE("... during averaging with high average");
+    BOOST_TEST_MESSAGE("... during averaging with high average");
     testErrorMessagesWithSpecificData(getAsianInputsJustBeforeSettlementWithHighAverage());
-    BOOST_MESSAGE("... during averaging with low average");
+    BOOST_TEST_MESSAGE("... during averaging with low average");
     testErrorMessagesWithSpecificData(getAsianInputsJustBeforeSettlementWithLowAverage());
 }
 
@@ -87,7 +87,7 @@ void AsianOptionTest::testErrorMessagesWithSpecificData(AsianOptionInputParamete
 
 void AsianOptionTest::testValulationBeforeAveraging()
 {
-    BOOST_MESSAGE("Testing Asian Option Valuation before averaging");
+    BOOST_TEST_MESSAGE("Testing Asian Option Valuation before averaging");
     AsianOptionInputParameters ip = getAsianInputsBeforeAveragingStarts();
     AverageRateCall call(ip.fwds, ip.fixes, ip.strike, ip.sds, ip.df);
     AverageRatePut put(ip.fwds, ip.fixes, ip.strike, ip.sds, ip.df);
@@ -125,7 +125,7 @@ void AsianOptionTest::testValulationBeforeAveraging()
 }
 void AsianOptionTest::testValulationDuringAveraging()
 {
-    BOOST_MESSAGE("Testing Asian Option Valuation during averaging");
+    BOOST_TEST_MESSAGE("Testing Asian Option Valuation during averaging");
     AsianOptionInputParameters ip = getAsianInputsDuringAveraging();
     AverageRateCall call(ip.fwds, ip.fixes, ip.strike, ip.sds, ip.df);
     AverageRatePut put(ip.fwds, ip.fixes, ip.strike, ip.sds, ip.df);
@@ -172,7 +172,7 @@ void AsianOptionTest::testValulationDuringAveraging()
 
 void AsianOptionTest::testValulationJustBeforeSettlementWithHighAverage()
 {
-    BOOST_MESSAGE("Testing Asian Option Valuation during averaging with high average");
+    BOOST_TEST_MESSAGE("Testing Asian Option Valuation during averaging with high average");
 
     AsianOptionInputParameters ip = getAsianInputsJustBeforeSettlementWithHighAverage();
     AverageRateCall call(ip.fwds, ip.fixes, ip.strike, ip.sds, ip.df);
@@ -208,7 +208,7 @@ void AsianOptionTest::testValulationJustBeforeSettlementWithHighAverage()
 
 void AsianOptionTest::testValulationJustBeforeSettlementWithLowAverage()
 {
-    BOOST_MESSAGE("Testing Asian Option Valuation during averaging with low average");
+    BOOST_TEST_MESSAGE("Testing Asian Option Valuation during averaging with low average");
     AsianOptionInputParameters ip = getAsianInputsJustBeforeSettlementWithLowAverage();
     AverageRateCall call(ip.fwds, ip.fixes, ip.strike, ip.sds, ip.df);
     AverageRatePut put(ip.fwds, ip.fixes, ip.strike, ip.sds, ip.df);

@@ -56,7 +56,7 @@ boost::shared_ptr<AsianOption> AsianOptionContactTest::getAsianOptionWithMoneyne
     
 void AsianOptionContactTest::testMaturityDate() 
 {
-    BOOST_MESSAGE("Testing AsianOption ...");
+    BOOST_TEST_MESSAGE("Testing AsianOption ...");
     Date anchorDate(1,Jan,2013);
     boost::shared_ptr<AsianOption> contract = getDefaultAsianOption(anchorDate);
     Date d = contract->getMaturityDate();
@@ -220,7 +220,7 @@ void AsianOptionContactTest::testGetPayoffAfterMaturity()
 
 void AsianOptionContactTest::testEuropeanOptionWithMoneynessVol() 
 {
-    BOOST_MESSAGE("Testing European Option with moneyness vol ...");
+    BOOST_TEST_MESSAGE("Testing European Option with moneyness vol ...");
 
     Date anchorDate(1,Jan,2013);
     GenerateRates gr = GenerateRates();

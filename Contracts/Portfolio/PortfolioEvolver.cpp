@@ -730,13 +730,13 @@ namespace sjd
             eePFEWithHoldingPeriod[i] = eeWithHoldingPeriodAccumulator[i][x];
 
             nth_element(neeNoHoldingPeriodAccumulator[i].begin(), 
-                  neeNoHoldingPeriodAccumulator[i].begin()+int(neeNoHoldingPeriodAccumulator[i].size()*0.95), 
+                  neeNoHoldingPeriodAccumulator[i].begin()+int(neeNoHoldingPeriodAccumulator[i].size()*0.05), 
                   neeNoHoldingPeriodAccumulator[i].end());
             x = int(neeNoHoldingPeriodAccumulator[i].size() * 0.05);
             neePFENoHoldingPeriod[i] = neeNoHoldingPeriodAccumulator[i][x];
 
             nth_element(neeWithHoldingPeriodAccumulator[i].begin(), 
-                  neeWithHoldingPeriodAccumulator[i].begin()+int(neeWithHoldingPeriodAccumulator[i].size()*0.95), 
+                  neeWithHoldingPeriodAccumulator[i].begin()+int(neeWithHoldingPeriodAccumulator[i].size()*0.05), 
                   neeWithHoldingPeriodAccumulator[i].end());
             x = int(neeWithHoldingPeriodAccumulator[i].size() * 0.05);
             neePFEWithHoldingPeriod[i] = neeWithHoldingPeriodAccumulator[i][x];

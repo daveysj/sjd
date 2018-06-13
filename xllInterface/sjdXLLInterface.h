@@ -39,11 +39,11 @@ xloper* __stdcall asianPremium(char* putOrCall, xl_array *fwds, int numRateSetFw
 
 xloper* __stdcall asianPremiumAndAnalyticGreeks(char* putOrCall, xl_array *forward, xl_array *yearFractionsToRateSet, double strike, 
                                double yearsToExpiry, double yearsToSettlement, xl_array *standardDeviation, 
-                               double discountFactor, bool returnAsRow = "ture", bool heading = "false");
+                               double discountFactor, bool returnAsRow = "true", bool heading = "false");
 
 xloper* __stdcall asianPremiumAndNumericGreeks(char* putOrCall, xl_array *forward,  xl_array *yearFractionsToRateSet, double strike, 
                                double yearsToExpiry, double yearsToSettlement, xl_array *standardDeviation, 
-                               double discountFactor, bool returnAsRow = "ture", bool heading = "false",
+                               double discountFactor, bool returnAsRow = "true", bool heading = "false",
                                double changeInFwd = 0.0001, double changeInVol = 0.0001, 
                                double changeInNACCRate = 0.0001, double changeInTime = 0.0001);
 

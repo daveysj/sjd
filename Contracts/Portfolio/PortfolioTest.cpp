@@ -22,7 +22,7 @@ boost::shared_ptr<RegCapCreditParameters> PortfolioTest::getDefaultRegCreditPara
 
 void PortfolioTest::testStructureCreation()
 {
-    BOOST_MESSAGE("Testing Portfolios ...");
+    BOOST_TEST_MESSAGE("Testing Portfolios ...");
 
     Date anchorDate = Date(27, Jan, 2013);
     GenerateRates gr = GenerateRates();
@@ -106,7 +106,7 @@ void PortfolioTest::testStructureCreation()
 
 void PortfolioTest::testPortfolioB2CEM()
 {
-    BOOST_MESSAGE("Testing B2 CEM ...");
+    BOOST_TEST_MESSAGE("Testing B2 CEM ...");
 
     Date anchorDate = Date(27, Jan, 2013);
     GenerateRates gr = GenerateRates();

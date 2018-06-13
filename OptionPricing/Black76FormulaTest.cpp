@@ -7,7 +7,7 @@ using namespace boost::math;
 using namespace sjd;
 
 void Black76Test::testPutCallParity() {
-    BOOST_MESSAGE("Testing Black Scholes Inputs ...");
+    BOOST_TEST_MESSAGE("Testing Black Scholes Inputs ...");
 
     double F = 100, X = 110, sd = 0.2, df = 0.97;
     Black76Call call(F,X,sd,df);
@@ -25,7 +25,7 @@ void Black76Test::testPutCallParity() {
 /*
 
 void BlackScholesTest::testErrorMessages() {
-    BOOST_MESSAGE("Testing Black Scholes Error Messages ...");
+    BOOST_TEST_MESSAGE("Testing Black Scholes Error Messages ...");
 
 
     double F = 11.1;

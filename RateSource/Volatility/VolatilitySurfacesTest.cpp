@@ -10,7 +10,7 @@ using namespace sjd;
 
 void VolatilitySurfacesTest::testEuropeanMoneynessConstruction()
 {
-    BOOST_MESSAGE("Testing VolatilitySurfaceMoneyness Construction ...");
+    BOOST_TEST_MESSAGE("Testing VolatilitySurfaceMoneyness Construction ...");
     // initialise with nulls 
     Date anchorDate = Date(27, January, 2012); 
     boost::shared_ptr<RatesEnvironment> re;
@@ -92,7 +92,7 @@ void VolatilitySurfacesTest::testEuropeanMoneynessConstruction()
 
 void VolatilitySurfacesTest::testEuropeanMoneynessConsistencyBetweenVolAndSD()
 {    
-    BOOST_MESSAGE("Testing VolatilitySurfaceMoneyness for consistency between stdev and vol ...");
+    BOOST_TEST_MESSAGE("Testing VolatilitySurfaceMoneyness for consistency between stdev and vol ...");
     GenerateRates re = GenerateRates();
     boost::shared_ptr<Calendar> calendar = re.defaultCalendar;
     Date anchorDate = re.defaultAnchorDate;
@@ -123,7 +123,7 @@ void VolatilitySurfacesTest::testEuropeanMoneynessConsistencyBetweenVolAndSD()
 
 void VolatilitySurfacesTest::testEuropeanMoneynessRoll()
 {
-    BOOST_MESSAGE("Testing VolatilitySurfaceMoneyness roll ...");
+    BOOST_TEST_MESSAGE("Testing VolatilitySurfaceMoneyness roll ...");
 
     GenerateRates re = GenerateRates();
     boost::shared_ptr<Calendar> calendar = re.defaultCalendar;
@@ -208,7 +208,7 @@ void VolatilitySurfacesTest::testEuropeanMoneynessRoll()
 
 void VolatilitySurfacesTest::testCalendarMonthMoneynessConstruction()
 {
-    BOOST_MESSAGE("Testing VolatilitySurfaceMoneynessCMA Construction ...");
+    BOOST_TEST_MESSAGE("Testing VolatilitySurfaceMoneynessCMA Construction ...");
     // initialise with nulls 
     Date anchorDate = Date(27, January, 2012); 
     boost::shared_ptr<RatesEnvironment> re;
@@ -281,7 +281,7 @@ void VolatilitySurfacesTest::testCalendarMonthMoneynessConstruction()
 
 void VolatilitySurfacesTest::testCalendarMonthMoneynessConsistencyBetweenVolAndSD()
 {
-    BOOST_MESSAGE("Testing VolatilitySurfaceMoneynessCMA for consistency between stdev and vol ...");
+    BOOST_TEST_MESSAGE("Testing VolatilitySurfaceMoneynessCMA for consistency between stdev and vol ...");
 
     GenerateRates re = GenerateRates();
     boost::shared_ptr<Calendar> calendar = re.defaultCalendar;
@@ -313,7 +313,7 @@ void VolatilitySurfacesTest::testCalendarMonthMoneynessConsistencyBetweenVolAndS
 
 void VolatilitySurfacesTest::testCalendarMonthMoneynessRoll()
 {
-    BOOST_MESSAGE("Testing VolatilitySurfaceMoneynessCMA roll ...");
+    BOOST_TEST_MESSAGE("Testing VolatilitySurfaceMoneynessCMA roll ...");
 
     GenerateRates re = GenerateRates();
     boost::shared_ptr<Calendar> calendar = re.defaultCalendar;
@@ -398,7 +398,7 @@ void VolatilitySurfacesTest::testCalendarMonthMoneynessRoll()
 
 void VolatilitySurfacesTest::testForwardDeltaVolatilitySurfaceConstruction() 
 {
-    BOOST_MESSAGE("Testing VolatilitySurfaceDelta Construction ...");
+    BOOST_TEST_MESSAGE("Testing VolatilitySurfaceDelta Construction ...");
 
     Date anchorDate = Date(27,Jan,2012);
     boost::shared_ptr<RatesEnvironment> re;

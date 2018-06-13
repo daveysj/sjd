@@ -14,7 +14,7 @@ boost::shared_ptr<RegCapUnderlyingFactors> StructureTest::getDefaultRegCapUnderl
 
 void StructureTest::testGradient()
 {
-    BOOST_MESSAGE("Testing Structures ...");
+    BOOST_TEST_MESSAGE("Testing Structures ...");
 
     Date anchorDate = Date(27, Jan, 2013);
     int yearsToSettlement = 2;

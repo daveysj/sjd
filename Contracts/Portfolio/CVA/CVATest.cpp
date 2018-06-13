@@ -7,7 +7,7 @@ using namespace sjd;
 
 
 void CVATest::testFlatPD() { 
-    BOOST_MESSAGE("Testing Flat PD CVA");
+    BOOST_TEST_MESSAGE("Testing Flat PD CVA");
 
     Date anchorDate = Date(05,June,2014);
    double pd = .1;
@@ -47,7 +47,7 @@ void CVATest::testFlatPD() {
 }
 
 void CVATest::testCumulativeDefaultProbability() { 
-    BOOST_MESSAGE("Testing CumulativeDefaultProbability CVA");
+    BOOST_TEST_MESSAGE("Testing CumulativeDefaultProbability CVA");
 
     Date anchorDate = Date(05,June,2014);
 

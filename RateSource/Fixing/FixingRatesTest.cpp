@@ -6,7 +6,7 @@ using namespace sjd;
 
 void FixingRateTest::testDailyFixingCurve() 
 {
-    BOOST_MESSAGE("Testing Daily Fixing Curve ...");
+    BOOST_TEST_MESSAGE("Testing Daily Fixing Curve ...");
 
     vector<Date> observationDates;
 
@@ -66,7 +66,7 @@ void FixingRateTest::testDailyFixingCurve()
 
 void FixingRateTest::testMonthlyFixingCurve() 
 {
-    BOOST_MESSAGE("Testing Monthly Fixing Curve ...");
+    BOOST_TEST_MESSAGE("Testing Monthly Fixing Curve ...");
 
     vector<Date> observationDates;
 
@@ -129,7 +129,7 @@ void FixingRateTest::testMonthlyFixingCurve()
 
 void FixingRateTest::testHistoricFedFundsCurve() 
 {
-    BOOST_MESSAGE("Testing HistoricFedFundsCurve ...");
+    BOOST_TEST_MESSAGE("Testing HistoricFedFundsCurve ...");
 
     vector<Date> observationDates;
 

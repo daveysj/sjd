@@ -7,7 +7,7 @@ using namespace sjd;
 
 void InterestRateConventionTest::testDFToRateConversion()
 {
-    BOOST_MESSAGE("Convert between rates in different convention and discount factors ...");
+    BOOST_TEST_MESSAGE("Convert between rates in different convention and discount factors ...");
 
     boost::shared_ptr<DayCounter> dc = boost::shared_ptr<DayCounter>(new Actual365Fixed());
     Date fromDate = Date(27,Jan,2012);

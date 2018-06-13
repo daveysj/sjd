@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -20,12 +20,14 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -41,8 +43,8 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(dllLib)</OutDir>
     <TargetExt>.xll</TargetExt>
-    <IncludePath>$(sjdTools);$(qlxl);$(qlo);$(ql);$(oh);$(sjd);$(boost);$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
-    <LibraryPath>$(qlxl)xll;$(log4cxx)msvc\lib;$(oh)lib;$(qlo)lib;$(ql)lib;$(boost)lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+    <IncludePath>$(sjdTools);$(qlxl);$(qlo);$(ql);$(oh);$(sjd);$(boost);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(ql)lib;$(oh)lib;$(qlo)lib;$(sjd)sjd\$(Configuration);$(boostlib);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
     <TargetName>$(ProjectName)</TargetName>
     <IntDir>$(Configuration)\</IntDir>
   </PropertyGroup>
@@ -50,8 +52,8 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(dllLib)</OutDir>
     <TargetExt>.xll</TargetExt>
-    <IncludePath>$(sjdTools);$(qlxl);$(qlo);$(ql);$(oh);$(sjd);$(boost);$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
-    <LibraryPath>$(log4cxx)msvc\lib;$(oh)lib;$(qlo)lib;$(ql)lib;$(boost)lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+    <IncludePath>$(sjdTools);$(qlxl);$(qlo);$(ql);$(oh);$(sjd);$(boost);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(ql)lib;$(oh)lib;$(qlo)lib;$(sjd)sjd\$(Configuration);$(boostlib);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
     <TargetName>$(ProjectName)</TargetName>
     <IntDir>$(Configuration)\</IntDir>
   </PropertyGroup>
@@ -97,6 +99,7 @@
       <ImportLibrary>
       </ImportLibrary>
       <AdditionalDependencies>ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

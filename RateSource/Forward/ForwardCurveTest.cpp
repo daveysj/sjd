@@ -7,7 +7,7 @@ using namespace sjd;
 
 void ForwardCurveTest::testForwardCurveConstruction() 
 {
-    BOOST_MESSAGE("Testing Construction of ForwardCurveDeterministic ...");
+    BOOST_TEST_MESSAGE("Testing Construction of ForwardCurveDeterministic ...");
     Date anchorDate = Date(27,Jan,2012);
     vector<Date> observationDates, incorrectObservationDates;
     vector<double> futures;
@@ -78,7 +78,7 @@ void ForwardCurveTest::testForwardCurveConstruction()
 
 void ForwardCurveTest::testForwardCurveRollsAtForwardVolConstruction() 
 {
-    BOOST_MESSAGE("Testing Construction of ForwardCurveStochasticFwdVol ...");
+    BOOST_TEST_MESSAGE("Testing Construction of ForwardCurveStochasticFwdVol ...");
 
     GenerateRates gr = GenerateRates();
     Date anchorDate = gr.defaultAnchorDate;
@@ -147,7 +147,7 @@ void ForwardCurveTest::testForwardCurveRollsAtForwardVolConstruction()
 
 void ForwardCurveTest::testConsistencyBetweenGetMethods()
 {
-    BOOST_MESSAGE("Testing ForwardCurveDeterministic has consistent get methods ...");
+    BOOST_TEST_MESSAGE("Testing ForwardCurveDeterministic has consistent get methods ...");
 
     Calendar calendar = NullCalendar();
     Date anchorDate = Date(27,Jan,2012);
@@ -206,7 +206,7 @@ void ForwardCurveTest::testConsistencyBetweenGetMethods()
 
 void ForwardCurveTest::testValues()
 {
-    BOOST_MESSAGE("Testing ForwardCurveDeterministic values ...");
+    BOOST_TEST_MESSAGE("Testing ForwardCurveDeterministic values ...");
 
     Calendar calendar = NullCalendar();
     Date anchorDate = Date(27,Jan,2012);
@@ -245,7 +245,7 @@ void ForwardCurveTest::testValues()
 
 void ForwardCurveTest::testRoll()
 {
-    BOOST_MESSAGE("Testing ForwardCurveDeterministic roll ...");
+    BOOST_TEST_MESSAGE("Testing ForwardCurveDeterministic roll ...");
 
     GenerateRates gr = GenerateRates();
     Date anchorDate = gr.defaultAnchorDate;
@@ -309,7 +309,7 @@ void ForwardCurveTest::testRoll()
 
 void ForwardCurveTest::testRollStochastic()
 {
-    BOOST_MESSAGE("Testing ForwardCurveStochasticFwdVol roll ...");
+    BOOST_TEST_MESSAGE("Testing ForwardCurveStochasticFwdVol roll ...");
 
     GenerateRates gr = GenerateRates();
     Date anchorDate = gr.defaultAnchorDate;

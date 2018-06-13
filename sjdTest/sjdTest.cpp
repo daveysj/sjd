@@ -42,9 +42,9 @@ test_suite* init_unit_test_suite(int, char* []) {
     std::string header = "Testing SJD Libraries";
     std::string rule = std::string(header.length(),'=');
 
-    BOOST_MESSAGE(rule);
-    BOOST_MESSAGE(header);
-    BOOST_MESSAGE(rule);
+    BOOST_TEST_MESSAGE(rule);
+    BOOST_TEST_MESSAGE(header);
+    BOOST_TEST_MESSAGE(rule);
     test_suite* test = BOOST_TEST_SUITE("sjd Library test suite");
 
     test->add(BOOST_TEST_CASE(startTimer));

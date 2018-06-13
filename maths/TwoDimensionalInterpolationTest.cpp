@@ -11,7 +11,7 @@ using namespace boost::assign; // used to initialize vector
 
 void Maths2DInterpTest::testBilinearInterpolator()
 {
-    BOOST_MESSAGE("Testing BilinearInterpolation class ...");
+    BOOST_TEST_MESSAGE("Testing BilinearInterpolation class ...");
 
     vector<double> time;
     time += 1, 2, 3, 6, 12, 24;
@@ -68,7 +68,7 @@ void Maths2DInterpTest::testBilinearInterpolator()
 
 void Maths2DInterpTest::testBicubicInterpolator()
 {
-    BOOST_MESSAGE("Testing BilinearCubic class ...");
+    BOOST_TEST_MESSAGE("Testing BilinearCubic class ...");
 
     vector<double> time;
     time += 1, 2, 3, 6, 12, 24;
@@ -118,7 +118,7 @@ void Maths2DInterpTest::testBicubicInterpolator()
    BOOST_CHECK(interpolator.getRate(1, 10) == qlInterp(1, 10));
    BOOST_CHECK(interpolator.getRate(24, 90) == qlInterp(24, 90));
    BOOST_CHECK(interpolator.getRate(9, 33) == qlInterp(9, 33));
-   BOOST_CHECK(isnan<double>(interpolator.getRate(9, 95)));
+   BOOST_CHECK(boost::isnan<double>(interpolator.getRate(9, 95)));
 
 
 }
