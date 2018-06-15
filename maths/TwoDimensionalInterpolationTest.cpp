@@ -61,7 +61,7 @@ void Maths2DInterpTest::testBilinearInterpolator()
    BOOST_CHECK(interpolator.getRate(1, 10) == qlInterp(1, 10));
    BOOST_CHECK(interpolator.getRate(24, 90) == qlInterp(24, 90));
    BOOST_CHECK(interpolator.getRate(9, 33) == qlInterp(9, 33));
-   BOOST_CHECK(isnan<double>(interpolator.getRate(9, 95)));
+   BOOST_CHECK(boost::math::isnan<double>(interpolator.getRate(9, 95)));
 
 
 }
@@ -118,7 +118,7 @@ void Maths2DInterpTest::testBicubicInterpolator()
    BOOST_CHECK(interpolator.getRate(1, 10) == qlInterp(1, 10));
    BOOST_CHECK(interpolator.getRate(24, 90) == qlInterp(24, 90));
    BOOST_CHECK(interpolator.getRate(9, 33) == qlInterp(9, 33));
-   BOOST_CHECK(boost::isnan<double>(interpolator.getRate(9, 95)));
+   BOOST_CHECK(boost::math::isnan<double>(interpolator.getRate(9, 95)));
 
 
 }

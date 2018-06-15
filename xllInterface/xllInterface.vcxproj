@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(oh);$(sjd);$(boost);$(ql);$(IncludePath)</IncludePath>
-    <LibraryPath>$(boost)lib;$(ql)lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(boost)lib32-msvc-14.0\;$(ql)lib;$(LibraryPath)</LibraryPath>
     <TargetExt>.xll</TargetExt>
     <OutDir>$(dllLib)</OutDir>
     <TargetName>sjd</TargetName>
@@ -50,7 +50,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(oh);$(sjd);$(boost);$(ql);$(IncludePath)</IncludePath>
-    <LibraryPath>$(boost)lib;$(ql)lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(boost)lib32-msvc-14.0\;$(ql)lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(dllLib)</OutDir>
     <TargetExt>.xll</TargetExt>
     <TargetName>sjd</TargetName>

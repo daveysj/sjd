@@ -37,7 +37,7 @@ void VolatilitySurfacesTest::testEuropeanMoneynessConstruction()
                                            moneyness, 
                                            volatility, 
                                            BICUBIC, 
-                                           frs));
+                                           false));
     BOOST_CHECK(volSurface->isOK() == false); 
 
     // initialise with inconsistent dimensions 
@@ -61,7 +61,7 @@ void VolatilitySurfacesTest::testEuropeanMoneynessConstruction()
                                            moneyness, 
                                            volatility, 
                                            BICUBIC, 
-                                           frs));
+                                           false));
     BOOST_CHECK(volSurface->isOK() == false);
 
     Date lastObservationDate = observationDates.back();
@@ -86,7 +86,7 @@ void VolatilitySurfacesTest::testEuropeanMoneynessConstruction()
                                            moneyness, 
                                            volatility, 
                                            BICUBIC, 
-                                           frs));
+                                           false));
     BOOST_CHECK(volSurface->isOK() == true);
 }
 
@@ -224,7 +224,7 @@ void VolatilitySurfacesTest::testCalendarMonthMoneynessConstruction()
 
    boost::shared_ptr<VolatilitySurfaceMoneynessCMA> volSurface = 
         boost::shared_ptr<VolatilitySurfaceMoneynessCMA>(
-            new VolatilitySurfaceMoneynessCMA(anchorDate, observationDates, moneyness, volatility, BICUBIC, frs));
+            new VolatilitySurfaceMoneynessCMA(anchorDate, observationDates, moneyness, volatility, BICUBIC, false));
     BOOST_CHECK(volSurface->isOK() == false);
 
     // initialise with inconsistent dimensions 
@@ -238,7 +238,7 @@ void VolatilitySurfacesTest::testCalendarMonthMoneynessConstruction()
     
     volSurface = 
         boost::shared_ptr<VolatilitySurfaceMoneynessCMA>(
-            new VolatilitySurfaceMoneynessCMA(anchorDate, observationDates, moneyness, volatility, BICUBIC, frs));
+            new VolatilitySurfaceMoneynessCMA(anchorDate, observationDates, moneyness, volatility, BICUBIC, false));
     BOOST_CHECK(volSurface->isOK() == false);
 
     // Add a second date in the same observation month
@@ -248,19 +248,19 @@ void VolatilitySurfacesTest::testCalendarMonthMoneynessConstruction()
     volatility = Matrix(moneyness.size(), observationDates.size(), 10);
     volSurface = 
         boost::shared_ptr<VolatilitySurfaceMoneynessCMA>(
-            new VolatilitySurfaceMoneynessCMA(anchorDate, observationDates, moneyness, volatility, BICUBIC, frs));
+            new VolatilitySurfaceMoneynessCMA(anchorDate, observationDates, moneyness, volatility, BICUBIC, false));
     BOOST_CHECK(volSurface->isOK() == false);
     observationDates.pop_back();
     volatility = Matrix(moneyness.size(), observationDates.size(), 10);
     volSurface = 
         boost::shared_ptr<VolatilitySurfaceMoneynessCMA>(
-            new VolatilitySurfaceMoneynessCMA(anchorDate, observationDates, moneyness, volatility, BICUBIC, frs));
+            new VolatilitySurfaceMoneynessCMA(anchorDate, observationDates, moneyness, volatility, BICUBIC, false));
     BOOST_CHECK(volSurface->isOK() == true);
 
     // set anchor date after the last ovservation date
     volSurface = 
         boost::shared_ptr<VolatilitySurfaceMoneynessCMA>(
-            new VolatilitySurfaceMoneynessCMA(laterDateInSameMonth, observationDates, moneyness, volatility, BICUBIC, frs));
+            new VolatilitySurfaceMoneynessCMA(laterDateInSameMonth, observationDates, moneyness, volatility, BICUBIC, false));
     BOOST_CHECK(volSurface->isOK() == false);
 
 
@@ -274,7 +274,7 @@ void VolatilitySurfacesTest::testCalendarMonthMoneynessConstruction()
     volatility = Matrix(moneyness.size(), observationDates.size(), 10);
     volSurface = 
         boost::shared_ptr<VolatilitySurfaceMoneynessCMA>(
-            new VolatilitySurfaceMoneynessCMA(anchorDate, observationDates, moneyness, volatility, BICUBIC, frs));
+            new VolatilitySurfaceMoneynessCMA(anchorDate, observationDates, moneyness, volatility, BICUBIC, false));
     BOOST_CHECK(volSurface->isOK() == true);
 
 }
@@ -432,7 +432,7 @@ void VolatilitySurfacesTest::testForwardDeltaVolatilitySurfaceConstruction()
     boost::shared_ptr<Calendar> nullCalendar = boost::shared_ptr<Calendar>(new NullCalendar());    
    boost::shared_ptr<ForwardRateSource> frs = gr.getSimpleForwardCurve(dayCounter, nullCalendar, anchorDate, 10, 100, .01, vector<Date>(0));
 
-   VolatilitySurfaceDelta vs(anchorDate, observationDates, delta, volatility, BICUBIC, frs);
+   VolatilitySurfaceDelta vs(anchorDate, observationDates, delta, volatility, BICUBIC, false);
     BOOST_REQUIRE(vs.isOK()); 
 
     Date d1 = calendar->advance(anchorDate, 1, Years);

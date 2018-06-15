@@ -7,7 +7,7 @@
 #include <sjd\RateSource\GenerateRatesEnvironments.h>
 
 #include <sjd\sjdTest\TestingParameters.h>
-#include <boost\math\special_functions\fpclassify.hpp> // isnan
+#include <boost\math\special_functions\fpclassify.hpp> // boost::math::isnan
 
 class VolatilityCurveTest 
 {

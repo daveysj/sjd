@@ -15,9 +15,6 @@
     <ClCompile Include="Register_All.cpp">
       <Filter>Register</Filter>
     </ClCompile>
-    <ClCompile Include="addin.cpp">
-      <Filter>Register</Filter>
-    </ClCompile>
     <ClCompile Include="Register_PathGenerator.cpp">
       <Filter>Register</Filter>
     </ClCompile>
@@ -139,6 +136,7 @@
     <ClCompile Include="Register_ContractStressor.cpp">
       <Filter>Register</Filter>
     </ClCompile>
+    <ClCompile Include="addin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Register_All.h">
