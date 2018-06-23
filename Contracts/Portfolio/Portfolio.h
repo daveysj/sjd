@@ -15,11 +15,11 @@ namespace sjd
 {
 
     /*======================================================================================
-   Portfolio
+    Portfolio
     
     A portfolio consists of one or more single instrument contracts. A Portfolio only 
-   addresses issues of forward valuation of the instruments. Regulatory Capital is a 
-   concept that is added later
+    addresses issues of forward valuation of the instruments. Regulatory Capital is a 
+    concept that is added later
     =======================================================================================*/
     class Portfolio : public MultipleInstrumentContract
     {

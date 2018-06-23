@@ -131,7 +131,7 @@ namespace sjd
 
       // Tmp variables used when evaluating the portfolio data on a path. 
         vector<double> spotPath, 
-                         mtmOnPath, 
+                       mtmOnPath, 
                        marginOnPath, 
                        exposurePathNoOffset, 
                        negativeExposurePathNoOffset,

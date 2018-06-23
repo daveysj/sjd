@@ -127,13 +127,19 @@ namespace sjd
         if (forwardSimulationDates.front() == anchorDate)
         {
             rns[0] = 0;
+            sds[0] = 0;
+            expectedForwards[0] = spot[0];
             ++startIndex;
         }
         for (size_t i = startIndex; i < forwardSimulationDates.size(); ++i)
         {
             expectedForwards[i] = getForward(forwardSimulationDates[i]);
+            double fwdFwd = expectedForwards[i] / expectedForwards[i - 1];
+
             sds[i] = vrs->getStandardDeviation(forwardSimulationDates[i]);
-            rns[i] = log(spot[i] / expectedForwards[i]) / sds[i] + sds[i] / 2.0;
+            double sd = sqrt((sds[i] * sds[i] - sds[i - 1] * sds[i - 1]));
+            
+            rns[i] = (log((spot[i]) / (spot[i-1] * fwdFwd)) + sd * sd / 2.0) / sd;
         }
         return rns;
     }
