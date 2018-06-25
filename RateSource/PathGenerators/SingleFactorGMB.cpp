@@ -120,22 +120,22 @@ namespace sjd
         if (drs == 0)
         {
             errorTracking->populateErrorMessage(
-                "Rates environement does not contain a discounting rate source that rolls deterministically");
+                "Rates environment does not contain a discounting rate source that rolls deterministically");
         }
         if (foreigndrs == 0 && (re->hasForeignDRS())) // foreign DRS may not be required 
         {
             errorTracking->populateErrorMessage(
-                "Rates environement does not contain a foreign discounting rate source that rolls deterministically");
+                "Rates environment does not contain a foreign discounting rate source that rolls deterministically");
         }
         if (vrs == 0)
         {
             errorTracking->populateErrorMessage(
-                "Rates environement does not contain a volatility rate source that rolls deterministically");
+                "Rates environment does not contain a volatility rate source that rolls deterministically");
         }
         if (frs == 0)
         {
             errorTracking->populateErrorMessage(
-                "Rates environement does not contain a forward rate source that rolls stochastically");
+                "Rates environment does not contain a forward rate source that rolls stochastically");
         }
         if (frsDependsOnInterestRateDifferential && foreigndrs == 0)
         {
@@ -145,7 +145,7 @@ namespace sjd
         if (re->hasFixingRS() && (fixingrs == 0))
         {
             errorTracking->populateErrorMessage(
-                "Rates environement does not contain a fixing rate source that rolls");
+                "Rates environment does not contain a fixing rate source that rolls");
         }
         return !errorTracking->getHasErrors();
     }
